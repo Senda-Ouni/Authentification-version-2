@@ -1,0 +1,40 @@
+
+<div class="py-5 container">
+  <div class="container-fluid">
+    <app-navbar></app-navbar>
+    <div class="page">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="slider">
+            <ul class="slides">
+              <li><a href="#"><img src="/src/assets/img/dummy/slide-1.jpg" alt="Slide 1"></a></li>
+              <li><a href="#"><img src="/src/assets/img/dummy/slide-2.jpg" alt="Slide 2"></a></li>
+              <li><a href="#"><img src="/src/assets/img/dummy/slide-3.jpg" alt="Slide 3"></a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="py-5 box">
+      <div *ngFor="let item of albumListe  | paginate: { itemsPerPage: 8, currentPage: p }">
+        <div class="card">
+          <img class="card-img-top" src="{{item.url}}">
+          <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-3">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>
+
+<ngx-loading [show]="isLoading" [config]="{ backdropBorderRadius: '3px' }"
+ [template]="customLoadingTemplate">
+</ngx-loading>
+
+

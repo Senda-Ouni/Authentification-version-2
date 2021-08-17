@@ -1,0 +1,35 @@
+
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px 2em;
+}
+
+.box :first-child {
+    align-self: center;
+}
+pagination-controls {
+  color: blue;
+  text-align: end;
+}
+
+@media (max-width: 800px) {
+  .box {
+    display: block;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .box {
+    display: block;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.card {
+  border: 0px;
+}

@@ -1,0 +1,15 @@
+
+.vertical-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #05516087;
+}
+.wrapper {
+  width: 380px;
+  padding: 40px 30px 50px 30px;
+  border-radius: 0px;
+  background-color: white;
+  color: black;
+  margin: auto;
+}
